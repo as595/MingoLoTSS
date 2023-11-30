@@ -36,7 +36,7 @@ FITS files are extracted with a field-of-view of 0.1 degree and a pixel size of 
 
 #### Field down-select
 
-For many catalogued objects, FITS files from multiple LoTSS fields are recovered. In a number of cases FITS files were found to contain only NaN values, where the object was just outside the field of view for a particular LoTSS field. These files were removed. 
+For many catalogued objects, FITS files from multiple LoTSS fields are recovered. In a number of cases FITS files were found to contain only NaN values, where the object was just outside the field of view for a particular LoTSS field. These files were removed (`validation.py`). 
 
 For objects that still had multiple FITS maps associated with them the preferred file was selected based on two criteria: (i) the angular separation between the catalogued position of the source and the centre of the FITS image, and (ii) the percentage of NaN-valued pixels in the image. Four cases were identified:
 
