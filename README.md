@@ -16,8 +16,13 @@ If you do use the dataset in a publication, please cite the originating catalogu
 
 ## Dataset description
 
+#### Images
 
-150 pixels is equivalent to 37.5 arcmin (0.625 degrees), which is larger than the LAS for all objects in the catalog with the exception of ILTJ142930.70+544406.2, which has an LAS of 53.7 arcmin. This source is not currently excluded from the data set. The next largest source has an LAS of ~34 arcmin.
+Each sample in the MingoLoTSS dataset contains a single channel 150 x 150 pixel image. 150 pixels is equivalent to 37.5 arcmin (0.625 degrees), which is larger than the LAS for all objects in the catalog with the exception of ILTJ142930.70+544406.2, which has an LAS of 53.7 arcmin. This source is not currently excluded from the data set. The next largest source has an LAS of ~34 arcmin.
+
+#### Labels
+
+The classifications for each source are mapped to class labels: {0, 1, 2, ... 9} as described in the table below, where the relative numbers of each class are also listed.
 
 <p align="center" width="100%">
     <img width="70%" src="https://github.com/as595/MingoLoTSS/blob/main/images/labels.png">
