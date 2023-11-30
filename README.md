@@ -52,6 +52,12 @@ For objects that still had multiple FITS maps associated with them the preferred
 
 FITS files extracted from the LoTSS postage stamp server are not guaranteed to be equal in size, with images near field edges often being truncated. For these edge cases the field centre and the catalogued object position are not necessarily coincident. Fifteen matched FITS images were found to have an offset between the catalogued source position and the FITS field centre greater than 15 arcseconds (i.e. one pixel). These images were visually inspected to confirm that the source was present in the image and then both the image and rms maps were recentred on the catalogued source position, using NaN padding where resizing was required to keep the full image size above 150 x 150 pixels.
 
+<p align="center" width="100%">
+    <img width="33%" src="https://github.com/as595/MingoLoTSS/blob/main/images/recentre.png"> 
+</p>
+
+![](./images/recentre.png)
+
 #### Image pre-processing
 
 For each object in the catalogue there is now one source image and one rms noise image. These are used to perform the following pre-processing steps:
@@ -59,6 +65,8 @@ For each object in the catalogue there is now one source image and one rms noise
 1. Set all NaN-valued pixels in the image file to zero.
 
 2. Use the rms image to set all pixels in the source image with pixel values less than 3 times the rms at the same position to zero.
+
+![](./images/subtracted.png)
 
 3. Crop the central $150\times 150$ pixels.
 
@@ -72,6 +80,7 @@ $$
 
 These steps are specified in `process_fits.py`.
 
+![](./images/masked.png)
 
 ### Dependencies
 
