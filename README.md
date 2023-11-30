@@ -14,7 +14,13 @@ If you do use the dataset in a publication, please cite the originating catalogu
 
 ---
 
-### Re-making the dataset
+## Dataset description
+
+
+150 pixels is equivalent to 37.5 arcmin (0.625 degrees), which is larger than the LAS for all objects in the catalog with the exception of ILTJ142930.70+544406.2, which has an LAS of 53.7 arcmin. This source is not currently excluded from the data set. The next largest source has an LAS of ~34 arcmin.
+
+
+## Re-making the dataset
 
 To remake the MingoLoTSS dataset simply run the `main.py` script:
 
