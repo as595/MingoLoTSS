@@ -52,9 +52,10 @@ For objects that still had multiple FITS maps associated with them the preferred
 
 FITS files extracted from the LoTSS postage stamp server are not guaranteed to be equal in size, with images near field edges often being truncated. For these edge cases the field centre and the catalogued object position are not necessarily coincident. Fifteen matched FITS images were found to have an offset between the catalogued source position and the FITS field centre greater than 15 arcseconds (i.e. one pixel). These images were visually inspected to confirm that the source was present in the image and then both the image and rms maps were recentred on the catalogued source position, using NaN padding where resizing was required to keep the full image size above 150 x 150 pixels.
 
+
+**ILTJ111725.92+563648.6** Left: original image. Right: recentred and padded image.
 <p align="center" width="100%">
     <img width="70%" src="https://github.com/as595/MingoLoTSS/blob/main/images/recentre.png">
-    <figcaption>ILTJ111725.92+563648.6. Left: original image. Right: recentred and padded image.</figcaption>
 </p>
 
 
@@ -66,6 +67,7 @@ For each object in the catalogue there is now one source image and one rms noise
 
 2. Use the rms image to set all pixels in the source image with pixel values less than 3 times the rms at the same position to zero.
 
+Left: original image. Centre: rms image. Right: subtracted image.
 <p align="center" width="100%">
     <img width="70%" src="https://github.com/as595/MingoLoTSS/blob/main/images/subtracted.png"> 
 </p>
@@ -80,12 +82,12 @@ $$
 Output = 255 \frac{Input - Min}{Max - Min}
 $$
 
-These steps are specified in `process_fits.py`.
-
+Left: centrally cropped image. Centre: radially cropped image. Right: normalised image.
 <p align="center" width="100%">
     <img width="70%" src="https://github.com/as595/MingoLoTSS/blob/main/images/masked.png"> 
 </p>
 
+These steps are specified in `process_fits.py`.
 
 ### Dependencies
 
