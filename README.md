@@ -28,9 +28,10 @@ This will execute a number of steps including:
  - applying the image pre-processing steps (specified below) and creating PNG files for each source;
  - creating a batched dataset (MNIST-style) for use with standard deep learning libraries such as PyTorch and Keras.
 
-### Data Format and Labels
+### Data Extraction
 
-FITS files are extracted with a field-of-view of 0.1 degree and a pixel size of 15 arcseconds. 
+FITS files are scraped individually from the LoTSS postage stamp server with a field-of-view of 0.1 degree and a pixel size of 15 arcseconds. If a specified FITS file already exists then the default is not to overwrite it with a new file. This can be changed by setting `overwrite=True` when `get_fits()` is called.
+
 
 ### Image Pre-processing
 
