@@ -44,7 +44,9 @@ This will execute a number of steps including:
 
 ### Data Extraction
 
-FITS files are scraped individually from the LoTSS postage stamp server with a field-of-view of 0.1 degree and a pixel size of 15 arcseconds. If a specified FITS file already exists then the default is not to overwrite it with a new file. This can be changed by setting `overwrite=True` when `get_fits()` is called.
+FITS files are scraped individually from the LoTSS postage stamp server with a field-of-view of 0.1 degree and a pixel size of 15 arcseconds (`scrape_lotss.py`). The full catalogue is scraped using the `get_fits.py` script.
+
+If a specified FITS file already exists then the default is not to overwrite it with a new file. This can be changed by setting `overwrite=True` when `get_fits()` is called.
 
 
 ### Image Pre-processing
