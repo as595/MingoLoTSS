@@ -9,8 +9,8 @@ This repo contains the code for *building* the MingoLoTSS deep learning dataset.
 
 If you do use the dataset in a publication, please cite the originating catalogue paper and the DOI for the batched dataset:
 
-* Mingo et al. [link]
-* Zenodo link [link]
+* Mingo et al. [link](https://arxiv.org/abs/1907.03726)
+* Zenodo link [link]()
 
 ---
 
